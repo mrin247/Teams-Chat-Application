@@ -4,7 +4,9 @@ import ChatFeed from './components/ChatFeed';
 import LoginForm from './components/LoginForm';
 import './App.css';
 
-const projectID = '1104af20-8f17-41b4-a65b-b4303108cdda';
+require('dotenv').config();
+
+const projectID = process.env.REACT_APP_PROJECT_KEY
 
 const App = () => {
   if (!localStorage.getItem('username')) return <LoginForm />;
